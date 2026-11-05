@@ -1,5 +1,5 @@
 // The Movie Database (TMDB) -rajapinta: https://developer.themoviedb.org
-const API_KEY = "7000faf1d985313ef3469442fb4f04b6";
+// API_KEY tulee tiedostosta config.js, jota EI viedä GitHubiin (ks. .gitignore ja README)
 const API_URL = "https://api.themoviedb.org/3";
 const KUVA_URL = "https://image.tmdb.org/t/p/w500";
 const ELOKUVA_URL = "https://www.themoviedb.org/movie/";
@@ -21,6 +21,9 @@ let hakuNumero = 0;           // estää vanhan haun vastauksen ylikirjoittamast
 // ---------- Haku rajapinnasta ----------
 
 async function haeJson(polku, parametrit) {
+  if (typeof API_KEY === "undefined") {
+    throw new Error("API-avain puuttuu (luo config.js, katso README)");
+  }
   const params = new URLSearchParams({
     api_key: API_KEY,
     language: "fi-FI",

@@ -21,21 +21,24 @@ Listaa vähintään kolme sovellukseesi suunniteltua toimintoa:
 
 ### Rautalankamalli / luonnos
 
-Lisää tähän kuva käsin piirtämästäsi tai digitaalisesti tehdystä sovelluksen luonnoksesta. Luonnoksessa tulee näkyä sovelluksen pääasiallinen näkymä ja tärkeimmät elementit.
+Piirsin rautalankamallin sen mukaan miltä finnkinon sovellus olisi näyttänyt, mutta muuten sain samanlaisen tähän, mutta en tuota kalenteria. 
+Suunnittelin ulkönäön samanlaiseksi kuin todolistani näytti niin oli helpompi käyttä vähän samoja elemnttejä.
+
 
 Esimerkki kuvan lisäämisestä:
 
-![Rautalankamalli](img.jpg/Suunnitelma%20leffasovellus.jpeg)
+![Rautalankamalli](img.jpg/Suunnitelma_leffasovellus.jpeg)
 
 ## Verkkolinkit
 
 - **Julkaistu sovellus:** [Lisää tähän GitHub Pages -osoite](https://yourusername.github.io/your-repository/)
-- **GitHub-repositorio:** [Lisää tähän repositorion osoite](https://github.com/yourusername/your-repository)
+- **GitHub-repositorio:** [Lisää tähän repositorion osoite](https://github.com/Millimalau/Projekti_2_Milli.git)
 - **Projektin videoesittely:** [Lisää tähän videon osoite](https://example.com/)
 
 ## Tietoja sovelluksesta
 
-**[Projektin nimi]** on verkkosovellus, joka ...
+**[Elokuva sovellus]** on verkkosovellus, jolla pystyy hakemaan elokuvia mitä voisi katsoa. Sovelluksesta voi saada ideaa mitä katsoa seuraavaksi. 
+Sovelluksella pystyy myös hyvin selvittämään mistä kyseisen elokuvan näkee, kun nykyää on niin paljon erilaisia suoratoistopalveluita.
 
 Kuvaile lyhyesti sovelluksen tarkoitus ja tärkeimmät toiminnot.
 
@@ -46,16 +49,15 @@ Kuvaile, mitä teknologioita käytit ja mikä niiden rooli oli projektissasi.
 - HTML – sivun rakenne
 - CSS – ulkoasu ja asettelu
 - JavaScript – toiminnallisuus, DOM-skriptaus ja lomakkeiden validointi
-- localStorage – tietojen tallentaminen selaimeen, jos käytit sitä
 
 ## Sovelluksen käyttö
 
 Kirjoita lyhyet käyttöohjeet sovellukselle.
 
 1. Avaa julkaistu sovellus yllä olevasta linkistä.
-2. Täytä lomakkeen kentät.
-3. Lisää, muokkaa, poista tai merkitse kohteita tehdyiksi.
-4. Päivitä sivu ja tarkista, säilyvätkö tiedot selaimessa, jos käytit localStoragea.
+2. Hae elokuvaa nimellä tai selaa elokuvia suodattimien mukaan
+3. klikkaa elokuvaa nähdäksesi lisää tietoja elokuvasta ja mistä sen voi katsoa
+
 
 ## Sovelluksen käynnistäminen paikallisesti
 
@@ -69,7 +71,7 @@ Lisää tähän vähintään yksi kuvakaappaus toimivasta sovelluksestasi.
 
 Esimerkki kuvan lisäämisestä:
 
-![Kuvakaappaus sovelluksesta](img/screenshot.png)
+![Kuvakaappaus sovelluksesta](img.jpg/Näyttökuva_sovelluksesta.png)
 
 ## Tunnetut virheet / puutteet
 
@@ -77,25 +79,16 @@ Kerro, jos sovelluksessa on tunnettuja virheitä, puuttuvia toimintoja tai muita
 
 Jos tunnettuja virheitä ei ole, kirjoita: **Ei tunnettuja virheitä.**
 
-## Työn jakautuminen
-
-*Täytä tämä osio vain, jos teit projektin parityönä.*
-
-Kuvaile, miten työ jakautui ja miten yhteistyö sujui.
-
-- Tekijä 1: ...
-- Tekijä 2: ...
 
 ## Oma arvio ja oppimisen reflektointi
 
 Pohdi työtäsi ja oppimisprosessiasi.
 
-- Missä onnistuin?
-- Mikä oli haastavaa?
-- Mitä parantaisin, jos aikaa olisi enemmän?
-- Mitä opin HTML:stä, CSS:stä, JavaScriptistä ja DOM-skriptauksesta?
-- Mikä jäi epäselväksi tai mistä haluaisin oppia lisää?
-- Oma arvio projektista: **xx/10 pistettä**
+- omalta kkohdalta onnistuminen oli se, että sain toimimaan ton sovelluksen. Meinasin alkuun palauttaa sen finnkinon version, joka ei olisi toiminut.
+- Haastavinta oli saada sovellus toimimaan oikein, että se hakee oikeasti ne tiedot. SIihen meni eniten aikaa.
+- Parantaisin sovelluksessa ulkoasua ja lisäisin toimintoja.
+- Haluaisin vielä enemmän oppia näistä rajapintojen käytöstä, että mitä kaikkia mahollisuuksia näissä voisi olla sovelluksia thedessä.
+- Oma arvio projektista: **7/10 pistettä**
 
 ## Lähteet ja kiitokset
 
@@ -103,10 +96,10 @@ Listaa kaikki projektissa käyttämäsi lähteet, tutoriaalit, kuvat ja koodiesi
 
 Jos käytit ChatGPT:tä, GitHub Copilotia tai muuta tekoälytyökalua, mainitse se tässä ja kerro lyhyesti, miten se tuki työskentelyäsi.
 
-- [Lähteen tai tutoriaalin nimi](https://example.com/)
-- [Kuvalähde](https://example.com/)
-- Käytetty tekoälytyökalu: ...
-  - Miten työkalua käytettiin: ...
+- [Lähteen tai tutoriaalin nimi](developer.mozilla.org) Tuolta tuli luettua vähän fetch ja DOM käyttöä.
+- [Kuvalähde](https://unsplash.com/s/photos/movie) popcorn kuva palkissa. Kuvan julkaisija: Andrii Solok
+- Käytetty tekoälytyökalu: Claude
+  - Miten työkalua käytettiin: Käytin claudea koodien rakentamiseen, ja eniten siinä, kun en saanut finnkinon APIA toimimaan, niin jouduin tosi paljon kyselemään ratkaisuja. Claude sitten ehdotti, että käytän mielummin tätä TMDB, kun Finnkinon oli bvanhentunut eikä sitä löytynyt enää. 
 
   ## Lisenssi
 
