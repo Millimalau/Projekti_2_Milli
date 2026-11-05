@@ -1,10 +1,9 @@
 :root {
-  --tausta: #151821;
   --raami: #232838;
   --kortti: #2e3448;
   --teksti: #f1f3f8;
-  --himmea: #aab1c5;
-  --korostus: #f2b705;
+  --himmea: #4ac0c0;
+  --korostus: #4ac0c0;
   --reunus: #3b4260;
 }
 
@@ -31,8 +30,7 @@ body {
   padding: 20px;
 }
 
-/* Yläpalkki: kuva taustalla + himmennetty tausta otsikolle.
-   Vaihda kuvan osoite alla olevaan url(...) kohtaan, esim. url("kuvat/teatteri.jpg") */
+/* YLäpalkki + kuva */
 .hero {
   min-height: 220px;
   border-radius: 16px;
@@ -108,7 +106,7 @@ select:focus, input:focus, .nappi:focus-visible, .card a:focus-visible {
   margin: 12px 0;
 }
 
-/* Korttiruudukko: 3 saraketta, kapeammalla näytöllä vähemmän */
+/*  Kortti ruudukko */
 .ruudukko {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
