@@ -32,9 +32,9 @@ Esimerkki kuvan lisäämisestä:
 
 ## Verkkolinkit
 
-- **Julkaistu sovellus:** [Lisää tähän GitHub Pages -osoite](https://millimalau.github.io/Projekti_2_Milli/)
-- **GitHub-repositorio:** [Lisää tähän repositorion osoite](https://github.com/Millimalau/Projekti_2_Milli.git)
-- **Projektin videoesittely:** [Lisää tähän videon osoite](https://www.loom.com/share/508814c5c8d74a97884ff2dd9d82ce6c)
+- **Julkaistu sovellus:** [https://millimalau.github.io/Projekti_2_Milli/]
+- **GitHub-repositorio:** [https://github.com/Millimalau/Projekti_2_Milli.git]
+- **Projektin videoesittely:** [https://www.loom.com/share/508814c5c8d74a97884ff2dd9d82ce6c]
 
 ## Tietoja sovelluksesta
 
