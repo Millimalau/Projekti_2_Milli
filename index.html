@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="fi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Elokuvat</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="sivu">
+
+    <header class="hero">
+      <h1 class="hero-otsikko">Elokuvat</h1>
+    </header>
+
+    <section class="suodattimet" aria-label="Suodattimet">
+      <div class="suodatin-rivi">
+        <label class="kentta">
+          <span>suodatin</span>
+          <select id="listaValinta">
+            <option value="now_playing">Nyt elokuvateattereissa</option>
+            <option value="upcoming">Tulossa elokuvateattereihin</option>
+            <option value="popular">Suosituimmat</option>
+            <option value="top_rated">Parhaiten arvostellut</option>
+          </select>
+        </label>
+        <label class="kentta kentta-haku">
+          <span>Hae elokuvaa</span>
+          <input type="search" id="hakukentta" placeholder="Kirjoita elokuvan nimi...">
+        </label>
+      </div>
+    </section>
+
+    <p id="viesti" class="viesti" role="status"></p>
+
+    <section id="elokuvat" class="ruudukko" aria-label="Elokuvat"></section>
+
+    <div class="lisaa-alue">
+      <button id="lisaaNappi" class="nappi" hidden>Näytä lisää</button>
+    </div>
+
+    <footer class="alatunniste">
+      Elokuvatiedot: The Movie Database (TMDB). This product uses the TMDB API but is not endorsed or certified by TMDB.
+    </footer>
+
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>

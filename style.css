@@ -1,0 +1,191 @@
+:root {
+  --tausta: #151821;
+  --raami: #232838;
+  --kortti: #2e3448;
+  --teksti: #f1f3f8;
+  --himmea: #aab1c5;
+  --korostus: #f2b705;
+  --reunus: #3b4260;
+}
+
+* { box-sizing: border-box; }
+
+/* Varmistaa, että hidden-attribuutti piilottaa elementin (muuten .nappi:n display ohittaa sen) */
+[hidden] { display: none !important; }
+
+body {
+  margin: 0;
+  padding: 24px 16px;
+  background: var(--tausta);
+  color: var(--teksti);
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+}
+
+/* Raami (tumma, ei musta) */
+.sivu {
+  max-width: 1000px;
+  margin: 0 auto;
+  background: var(--raami);
+  border: 2px solid var(--reunus);
+  border-radius: 24px;
+  padding: 20px;
+}
+
+/* Yläpalkki: kuva taustalla + himmennetty tausta otsikolle.
+   Vaihda kuvan osoite alla olevaan url(...) kohtaan, esim. url("kuvat/teatteri.jpg") */
+.hero {
+  min-height: 220px;
+  border-radius: 16px;
+  background-color: #3a4260;
+  background-image: url("img.jpg/Elokuva.webp");
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+}
+
+.hero-otsikko {
+  margin: 0;
+  padding: 12px 32px;
+  font-size: clamp(2rem, 6vw, 3.5rem);
+  background: rgba(0, 0, 0, 0.55);
+  border-radius: 12px;
+  backdrop-filter: blur(2px);
+  text-align: center;
+}
+
+/* Suodattimet */
+.suodattimet {
+  margin: 24px 0 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  align-items: center;
+}
+
+.suodatin-rivi {
+  display: flex;
+  gap: 14px;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 100%;
+}
+
+.kentta {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  font-size: 0.85rem;
+  color: var(--himmea);
+}
+
+.suodatin-rivi .kentta { flex: 1 1 220px; max-width: 360px; }
+.suodatin-rivi .kentta-haku { flex: 2 1 280px; max-width: 480px; }
+
+select, input {
+  width: 100%;
+  padding: 10px 12px;
+  font-size: 1rem;
+  color: var(--teksti);
+  background: var(--kortti);
+  border: 1px solid var(--reunus);
+  border-radius: 10px;
+}
+
+input[type="date"] { color-scheme: dark; }
+
+select:focus, input:focus, .nappi:focus-visible, .card a:focus-visible {
+  outline: 2px solid var(--korostus);
+  outline-offset: 2px;
+}
+
+.viesti {
+  text-align: center;
+  color: var(--himmea);
+  min-height: 1.4em;
+  margin: 12px 0;
+}
+
+/* Korttiruudukko: 3 saraketta, kapeammalla näytöllä vähemmän */
+.ruudukko {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+@media (max-width: 760px) { .ruudukko { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 460px) { .ruudukko { grid-template-columns: 1fr; } }
+
+.card {
+  background: var(--kortti);
+  border: 1px solid var(--reunus);
+  border-radius: 14px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.card-img-top {
+  width: 100%;
+  aspect-ratio: 2 / 3;
+  object-fit: cover;
+  display: block;
+  background: #1f2433;
+}
+
+.card-body {
+  padding: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  flex: 1;
+  justify-content: space-between;
+}
+
+.card-title {
+  margin: 0;
+  font-size: 1.05rem;
+  line-height: 1.25;
+}
+
+.btn, .nappi {
+  display: inline-block;
+  text-align: center;
+  padding: 9px 14px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #1a1a1a;
+  background: var(--korostus);
+  border: none;
+  border-radius: 10px;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.btn:hover, .nappi:hover { filter: brightness(1.1); }
+
+.lisaa-alue { text-align: center; margin-top: 22px; }
+
+/* Kortti ilman julistetta */
+.ei-kuvaa {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--himmea);
+  font-size: 0.9rem;
+}
+
+.card-vuosi {
+  margin: 4px 0 0;
+  font-size: 0.85rem;
+  color: var(--himmea);
+}
+
+.alatunniste {
+  margin-top: 28px;
+  text-align: center;
+  font-size: 0.75rem;
+  color: var(--himmea);
+}
