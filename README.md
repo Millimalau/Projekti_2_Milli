@@ -15,9 +15,10 @@ Sovelluksella pystyy hakea elokuvia TMDB Apia käyttäen sieltä sivulta. Sovell
 
 Listaa vähintään kolme sovellukseesi suunniteltua toimintoa:
 
-- Hae elokuvaa
-- Selaa elokuvia
+- Hae ja selaa elokuvia
+- ELokuvat korteissa ja linkki elokuvan sivulle
 - Suodata elokuvia esim. suosituimmat elokuvat
+- Responsiivinen koneella ja puhelimella
 
 ### Rautalankamalli / luonnos
 
@@ -31,7 +32,7 @@ Esimerkki kuvan lisäämisestä:
 
 ## Verkkolinkit
 
-- **Julkaistu sovellus:** [Lisää tähän GitHub Pages -osoite](https://yourusername.github.io/your-repository/)
+- **Julkaistu sovellus:** [Lisää tähän GitHub Pages -osoite](https://millimalau.github.io/Projekti_2_Milli/)
 - **GitHub-repositorio:** [Lisää tähän repositorion osoite](https://github.com/Millimalau/Projekti_2_Milli.git)
 - **Projektin videoesittely:** [Lisää tähän videon osoite](https://example.com/)
 
@@ -48,7 +49,8 @@ Kuvaile, mitä teknologioita käytit ja mikä niiden rooli oli projektissasi.
 
 - HTML – sivun rakenne
 - CSS – ulkoasu ja asettelu
-- JavaScript – toiminnallisuus, DOM-skriptaus ja lomakkeiden validointi
+- JavaScript – fetch ja async/await datan hakuun
+DOM-käsittely: kortit luodaan JavaScriptillä, ja tapahtumankäsittelijät lisätään dynaamisesti addEventListenerilla
 
 ## Sovelluksen käyttö
 
@@ -61,9 +63,14 @@ Kirjoita lyhyet käyttöohjeet sovellukselle.
 
 ## Sovelluksen käynnistäminen paikallisesti
 
-1. Kloonaa tai lataa tämä repositorio omalle koneellesi.
-2. Avaa projektikansio.
-3. Avaa `index.html` selaimessa.
+API-avainta ei ole viety GitHubiin, joten se pitää lisätä itse:
+
+Luo ilmainen tili osoitteessa https://www.themoviedb.org ja hae API-avain (Settings → API).
+Kopioi tiedosto config.example.js nimellä config.js.
+Avaa config.js ja korvaa teksti TÄHÄN_OMA_TMDB_API_AVAIN omalla API-avaimellasi.
+Avaa index.html selaimessa (esimerkiksi VS Coden Live Serverillä).
+
+Tiedosto config.js on lisätty .gitignore-tiedostoon, jotta avain ei päädy julkiseen repositorioon.
 
 ## Kuvakaappaukset
 
@@ -97,6 +104,7 @@ Listaa kaikki projektissa käyttämäsi lähteet, tutoriaalit, kuvat ja koodiesi
 Jos käytit ChatGPT:tä, GitHub Copilotia tai muuta tekoälytyökalua, mainitse se tässä ja kerro lyhyesti, miten se tuki työskentelyäsi.
 
 - [Lähteen tai tutoriaalin nimi](developer.mozilla.org) Tuolta tuli luettua vähän fetch ja DOM käyttöä.
+- TMDB-rajapinta ja dokumentaatio: https://developer.themoviedb.org
 - [Kuvalähde](https://unsplash.com/s/photos/movie) popcorn kuva palkissa. Kuvan julkaisija: Andrii Solok
 - Käytetty tekoälytyökalu: Claude
   - Miten työkalua käytettiin: Käytin claudea koodien rakentamiseen, ja eniten siinä, kun en saanut finnkinon APIA toimimaan, niin jouduin tosi paljon kyselemään ratkaisuja. Claude sitten ehdotti, että käytän mielummin tätä TMDB, kun Finnkinon oli bvanhentunut eikä sitä löytynyt enää. 
